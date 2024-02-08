@@ -118,6 +118,17 @@ footer {
   box-shadow: 2px 2px 4px 4px rgba(250, 250, 250, 0.5);
 }
 
+#backgroundImage {
+  opacity: 0.1;
+  position: fixed;
+  top:70px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  z-index: -1;
+}
+
+
 /*responsiveness*/
 @media (max-width: 700px) {
   #headerBottom {
@@ -138,6 +149,8 @@ footer {
   .burgerMenuImage:hover {
     box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
   }
+
+
   }
   
   @media (max-width:600px) {
