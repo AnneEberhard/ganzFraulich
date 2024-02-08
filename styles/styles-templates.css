@@ -1,5 +1,5 @@
 header {
-  background-color: rgb(40,121,129);
+  background-color: rgb(42,114,121);
   width: 100vw;
   box-sizing: border-box;
   padding: 16px 16px 16px 16px;
@@ -57,7 +57,7 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgb(40,121,129);
+  background-color: rgb(42,114,121);
   box-sizing: border-box;
   padding: 32px 16px 16px 16px;
   color: white;
@@ -93,7 +93,7 @@ header {
 /*footer*/
 
 footer {
-  background-color: rgb(40,121,129);
+  background-color: rgb(42,114,121);
   height: 100px;
   width: 100%;
   box-sizing: border-box;

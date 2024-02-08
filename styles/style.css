@@ -26,8 +26,13 @@ h2 {
   font-family: "Aboreto";
 }
 
+h3 {
+  font-size:24px;
+  color: rgb(42,114,121);
+}
+
 a {
-  color: rgb(40, 121, 129);
+  color: rgb(42,114,121);
   text-decoration: none;
   font-size: 20px;
 }
@@ -37,9 +42,13 @@ a:hover {
   text-shadow: 2px 2px 4px rgba(92, 175, 198, 0.8);
 }
 
+ul {
+  text-align: left;
+}
+
 .mainContainer {
   flex: 1;
-  padding: 16px 60px 16px 60px;
+  padding: 32px 60px 16px 60px;
   text-align: center;
 }
 
@@ -48,11 +57,12 @@ a:hover {
 }
 
 p {
-
+font-size:24px;
 }
 
 span {
   font-weight: bold;
+  font-size:24px;
 }
 /*contact*/
 #contactForm {
@@ -64,7 +74,7 @@ span {
 }
 
 input {
-  border: solid 1px rgb(40, 121, 129);
+  border: solid 1px rgb(42,114,121);
   border-radius: 10px;
   padding: 15px 25px 15px 25px;
   display: flex;
@@ -82,7 +92,7 @@ input:hover {
 }
 
 input::placeholder {
-  color: rgb(40, 121, 129);
+  color: rgb(42,114,121);
   font-family: "Poppins";
 }
 
@@ -97,13 +107,13 @@ input:visited {
 }
 
 textarea {
-  border: solid 1px rgb(40, 121, 129);
+  border: solid 1px rgb(42,114,121);
   border-radius: 10px;
   padding: 15px 25px 15px 25px;
   gap: 4px;
   font-size: 16px;
   width: 100%;
-  color: rgb(40, 121, 129);
+  color: rgb(42,114,121);
   box-sizing: border-box;
   background-color: white;
   height: 340px;
@@ -115,7 +125,7 @@ textarea:hover {
 }
 
 textarea::placeholder {
-  color: rgb(40, 121, 129);
+  color: rgb(42,114,121);
   font-family: "Poppins";
 }
 
