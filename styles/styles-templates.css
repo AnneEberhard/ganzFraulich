@@ -1,6 +1,5 @@
 header {
-  background-color: #0097b2;
-  height: 300px;
+  background-color: rgb(40,121,129);
   width: 100vw;
   box-sizing: border-box;
   padding: 16px 16px 16px 16px;
@@ -8,38 +7,32 @@ header {
   color: white;
   align-items: center;
   z-index: 99;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
-  height: 200px;
-  position: absolute;
-  top: 32px;
-  left: 32px;
+  height: 100px;
 }
 
-#subHeader {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
-#subHeaderTop {
+#headerTop {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#subHeaderBottom {
-  display: flex;
-}
-
-nav {
+#headerBottom {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
 }
+
 
 .navLink {
   color: white;
+  text-align: center;
+  padding: 8px;
 }
 
 .navLink:hover {
@@ -64,7 +57,7 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #0097b2;
+  background-color: rgb(40,121,129);
   box-sizing: border-box;
   padding: 32px 16px 16px 16px;
   color: white;
@@ -100,7 +93,7 @@ nav {
 /*footer*/
 
 footer {
-  background-color: #0097b2;
+  background-color: rgb(40,121,129);
   height: 100px;
   width: 100%;
   box-sizing: border-box;

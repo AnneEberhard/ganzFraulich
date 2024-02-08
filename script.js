@@ -22,3 +22,12 @@ async function includeHTML() {
     }
   }
   
+  function showMobileMenu() {
+    const mobileNav = document.getElementById("mobileNav");
+    mobileNav.classList.remove("dNone"); 
+  }
+  
+  function closeMobileMenu() {
+    const mobileNav = document.getElementById("mobileNav");
+    mobileNav.classList.add("dNone");
+  }
