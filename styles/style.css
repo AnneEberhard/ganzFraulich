@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Raleway";
+    overflow-x: hidden;
+    color: rgb(28, 50, 86);
+  }
+
+  .dNone {
+    display: none !important;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-family: "Aboreto";
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+  
+  h2 {
+    font-size: 36px;
+    font-family: "Aboreto";
+  }
+  
+  a {
+    color: #0097b2;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  a:hover {
+    color: #0097b2;
+    text-shadow: 2px 2px 4px rgba(92, 175, 198, 0.8);
+  }
+
+  .mainContainer {
+    flex: 1;
+    padding: 16px 60px 16px 60px;
+  }
