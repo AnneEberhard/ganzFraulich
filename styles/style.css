@@ -40,10 +40,19 @@ a:hover {
 .mainContainer {
   flex: 1;
   padding: 16px 60px 16px 60px;
+  text-align: center;
 }
 
 #burgerMenu {
   display: none;
+}
+
+p {
+
+}
+
+span {
+  font-weight: bold;
 }
 /*contact*/
 #contactForm {
