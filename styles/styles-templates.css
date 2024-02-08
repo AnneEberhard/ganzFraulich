@@ -28,6 +28,12 @@ header {
   width: 100%;
 }
 
+#desktopNav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 
 .navLink {
   color: white;
@@ -111,3 +117,42 @@ footer {
 .footerIcon:hover {
   box-shadow: 2px 2px 4px 4px rgba(250, 250, 250, 0.5);
 }
+
+/*responsiveness*/
+@media (max-width: 700px) {
+  #headerBottom {
+    text-align: center;
+  }
+  
+  #desktopNav {
+    display: none;
+  }
+  
+  #burgerMenu {
+    display: flex !important;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .burgerMenuImage:hover {
+    box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
+  }
+  }
+  
+  @media (max-width:600px) {
+    .logo {
+      height: 100px;
+    }
+    #headerBottom {
+      margin-block-start: 0.2em;
+      margin-block-end: 0.2em;
+    }
+  }
+  
+  @media (max-width: 350px) {
+    header {
+      height: 280px;
+      padding: 60px 16px 16px 16px;
+    }
+  }

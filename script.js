@@ -21,6 +21,10 @@ async function includeHTML() {
       }
     }
   }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   
   function showMobileMenu() {
     const mobileNav = document.getElementById("mobileNav");
