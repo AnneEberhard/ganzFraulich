@@ -147,6 +147,17 @@ button {
   background-color: #b6b6b6;
 }
 
+.hoverButton {
+  background-color: rgb(19, 79, 92) !important;
+  border: none;
+  cursor: pointer;
+}
+
+.hoverButton:hover {
+    transform: scale(1.1);
+  }
+
+
 #privacyContainer {
   display: flex;
   align-items: center;
@@ -165,7 +176,7 @@ button {
   background-color: rgba(0, 190, 232, 0.2);
 }
 
-.alert {
+#privacyAlert {
   font-size: 14px;
   text-align: left;
   color: red;

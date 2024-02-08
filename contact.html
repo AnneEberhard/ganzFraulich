@@ -19,24 +19,19 @@
     <div w3-include-html="assets/templates/mobile-menu.html"></div>
     <div w3-include-html="assets/templates/background.html"></div>
     <div class="mainContainer">
-        <form id="contactForm" onsubmit="sendMail()">
+        <form id="contactForm" onsubmit="sendMail(); return false;">
             <label >Name</label>
-              <input required  placeholder="Name" type="text" id="nameField" />
-                
+              <input required  placeholder="Name" type="text" id="nameField" name="name"/>
               <label >Email-Adresse</label>
-              <input required placeholder="Email" type="email" id="emailField" />
-            
+              <input required placeholder="Email" type="email" id="emailField" name="email" />
               <label >Nachricht</label>
-              <textarea required placeholder="Nachricht" id="messageField"></textarea>
-            
+              <textarea required placeholder="Nachricht" id="messageField" name="message" ></textarea>
               <div id="privacyContainer">
-                <div #privacyContainerBox id="privacyContainerBox" onclick="checkPrivacy()"></div>
-                <p >Ich habe die <a routerLink="/privacy-policy" >Datenschutzerklärung</a> gelesen und erkläre mich damit einverstanden, dass meine Daten wie beschrieben weitergegeben werden.</p>
+                <div id="privacyContainerBox" onclick="checkPrivacy()"></div>
+                <p >Ich habe die <a target="_blank" href="/privacy-policy" >Datenschutzerklärung</a> gelesen und erkläre mich damit einverstanden, dass meine Daten wie beschrieben weitergegeben werden.</p>
               </div>
-              
-              <div #privacyAlert class="alert" >Bitte akzeptiere die Datenschutzerklärung</div>
-            
-              <button type="submit" #sendButton>Senden</button>
+              <div id="privacyAlert" class="dNone" >Bitte akzeptiere die Datenschutzerklärung.</div>
+              <button type="submit" disabled id="sendButton">Senden</button>
             </form>
       </div>
       <div class="scrollToTopButton">
