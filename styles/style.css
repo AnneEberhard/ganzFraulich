@@ -15,26 +15,32 @@ body {
 }
 
 h1 {
-  font-size: 40px;
-  font-family: "Aboreto";
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
+  font-size: 44px;
+  font-family: "Pompiere";
+  margin-block-start: 0;
+  margin-block-end: -0.5em;
 }
 
 h2 {
-  font-size: 28px;
-  font-family: "Aboreto";
+  font-size: 36px;
+  font-family: "Pompiere";
 }
 
 h3 {
-  font-size:24px;
+  font-size:34px;
   color: rgb(42,114,121);
+}
+
+h4 {
+  font-size: 26px;
+  color: rgb(42,114,121);
+  margin-block-end: 0.5em;
 }
 
 a {
   color: rgb(42,114,121);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 a:hover {
@@ -52,18 +58,23 @@ ul {
   text-align: center;
 }
 
-#burgerMenu {
-  display: none;
-}
 
 p {
 font-size:24px;
+font-weight: 400;
 }
 
 span {
   font-weight: bold;
   font-size:24px;
 }
+
+.indexLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+
 /*contact*/
 #contactForm {
   display: flex;

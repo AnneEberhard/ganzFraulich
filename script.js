@@ -29,14 +29,16 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function showMobileMenu() {
+function showMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.remove("dNone");
+  mobileNav.classList.add("easeIn");
 }
 
-function closeMobileMenu() {
+function closeMenu() {
   const mobileNav = document.getElementById("mobileNav");
   mobileNav.classList.add("dNone");
+  mobileNav.classList.remove("easeIn");
 }
 
 function highlightCurrentPage() {
