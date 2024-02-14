@@ -62,6 +62,7 @@ ul {
 p {
 font-size:24px;
 font-weight: 400;
+width: 100%;
 }
 
 span {
@@ -168,23 +169,31 @@ button {
     transform: scale(1.1);
   }
 
-
-#privacyContainer {
+.checkBoxContainer {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
   font-size: 14px;
+  width: 100%;
 }
 
-#privacyContainerBox {
+.checkBox {
   height: 24px;
   width: 24px;
   border: solid 2px #00bee8;
   cursor: pointer;
 }
-#privacyContainerBox:hover {
+
+.checkBox {
   box-shadow: 1px 1px 20px 10px rgba(0, 190, 232, 0.2);
   background-color: rgba(0, 190, 232, 0.2);
+}
+
+.checkBoxContainerText {
+  width: 100%;
+  text-align: left;
+  padding-left: 8px;
 }
 
 #privacyAlert {

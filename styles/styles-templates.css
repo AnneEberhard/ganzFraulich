@@ -4,27 +4,66 @@
 
 /* header*/
 header {
-  background-color: rgb(42,114,121);
   width: 100vw;
   box-sizing: border-box;
   padding: 16px 16px 16px 16px;
   display: flex;
-  color: white;
+  color: rgb(42, 114, 121);
   align-items: center;
   z-index: 99;
   display: flex;
   flex-direction: column;
 }
 
-.logo {
-  height: 140px;
+#halfCircle {
+  background-color: #8fb8bc;
+  border-radius: 0 0 0 1000px;
+  position: absolute;
+  width: 40vw;
+  height: 20vw;
+  top: -50px;
+  right: -50px;
+  z-index: 0;
 }
 
+.logo {
+  height: 200px;
+  position: relative;
+  border-radius: 100%;
+}
+
+#logoBox {
+  background-color: white;
+  border-style: solid;
+  border-width: 5px 5px 1px 1px;
+  border-color: rgb(42, 114, 121);
+  /*height: 160px;
+  width: 160px;*/
+  z-index: 99;
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 33px;
+  right: 80px;
+}
 
 #headerTop {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#headerTopText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 60px;
 }
 
 #headerBottom {
@@ -39,13 +78,12 @@ header {
   width: 100%;
 }
 
-
 #burgerMenu {
   display: block;
   position: absolute;
   top: 20px;
   right: 20px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 #burgerMenu:hover {
@@ -63,14 +101,13 @@ header {
   text-shadow: 2px 2px 4px rgba(250, 250, 250, 0.8);
 }
 
-
 /*mobile menu*/
 #mobileNav {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: rgb(42,114,121);
+  background-color: rgb(42, 114, 121);
   box-sizing: border-box;
   padding: 32px;
   color: white;
@@ -80,15 +117,15 @@ header {
   justify-content: space-evenly;
   z-index: 9;
   opacity: 0.9;
-  transition: 1s ease-in-out; 
+  transition: 1s ease-in-out;
 }
 
 .easeIn {
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .mobileLogo {
-display:none;
+  display: none;
 }
 
 .mobileNavLink {
@@ -108,7 +145,7 @@ display:none;
 /*footer*/
 
 footer {
-  background-color: rgb(42,114,121);
+  background-color: rgb(42, 114, 121);
   height: 100px;
   width: 100%;
   box-sizing: border-box;
@@ -132,31 +169,30 @@ footer {
 #backgroundImage {
   opacity: 0.1;
   position: fixed;
-  top:70px;
+  top: 70px;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   z-index: -1;
 }
 
-
 /*responsiveness*/
 @media (max-width: 700px) {
   #headerBottom {
     text-align: center;
   }
-  
+
   #desktopNav {
     display: none;
   }
-  
+
   #burgerMenu {
     display: flex !important;
     justify-content: center;
     cursor: pointer;
     margin-top: 20px;
   }
-  
+
   .burgerMenuImage:hover {
     box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
   }
@@ -171,22 +207,21 @@ footer {
     top: 0;
     left: 0;
   }
+}
 
+@media (max-width: 600px) {
+  .logo {
+    height: 100px;
   }
-  
-  @media (max-width:600px) {
-    .logo {
-      height: 100px;
-    }
-    #headerBottom {
-      margin-block-start: 0.2em;
-      margin-block-end: 0.2em;
-    }
+  #headerBottom {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
   }
-  
-  @media (max-width: 350px) {
-    header {
-      height: 280px;
-      padding: 60px 16px 16px 16px;
-    }
+}
+
+@media (max-width: 350px) {
+  header {
+    height: 280px;
+    padding: 60px 16px 16px 16px;
   }
+}

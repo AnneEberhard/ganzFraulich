@@ -1,53 +1,35 @@
 <?php
 
-########### CONFIG ###############
-
 $recipient = 'anne.eberhard@gmx.net';
 ##$redirect = 'success.html';
 
 
-########### CONFIG END ###########
-
-
-
-########### Intruction ###########   
-#
-#   This script has been created to send an email to the $recipient
-#   
-#  1) Upload this file to your FTP Server
-#  2) Send a POST request to this file, including
-#     [name] The name of the sender (Absender)
-#     [message] Message that should be send to you
-#
-##################################
-
-
-
-###############################
-#
-#        DON'T CHANGE ANYTHING FROM HERE!
-#
-#        Ab hier nichts mehr ändern!
-#
-###############################
-
 switch ($_SERVER['REQUEST_METHOD']) {
-    case ("OPTIONS"): //Allow preflighting to take place.
+    case ("OPTIONS"): // Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
         header("Access-Control-Allow-Methods: POST");
         header("Access-Control-Allow-Headers: content-type");
         exit;
-    case ("POST"): //Send the email;
+    case ("POST"): // Send the email;
         header("Access-Control-Allow-Origin: *");
 
-        $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@ganzfraulich.de";
+        $newsletterStatus = isset($_POST['newsletter']) ? $_POST['newsletter'] : '0';
 
-        mail($recipient, $subject, $_POST['message'], $headers);
-        # header("Location: " . $redirect); 
+        if ($newsletterStatus === '1') {
+            $newsletterMessage = "Sender/in hat sich für den Newsletter angemeldet.";
+        } else {
+            $newsletterMessage = "";
+        }
+
+        $subject = "Contact From " . $_POST['name'];
+        $headers = "From: noreply@ganzfraulich.de";
+        $message = $_POST['message'] . "\n\n" . $newsletterMessage;
+
+        mail($recipient, $subject, $message, $headers, $newsletterMessage);
 
         break;
-    default: //Reject any non POST or OPTIONS requests.
+    default: // Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
 }
+?>

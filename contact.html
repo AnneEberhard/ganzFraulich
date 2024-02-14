@@ -26,9 +26,14 @@
               <input required placeholder="Email" type="email" id="emailField" name="email" />
               <label >Nachricht</label>
               <textarea required placeholder="Nachricht" id="messageField" name="message" ></textarea>
-              <div id="privacyContainer">
-                <div id="privacyContainerBox" onclick="checkPrivacy()"></div>
-                <p >Ich habe die <a target="_blank" href="/privacy-policy" >Datenschutzerklärung</a> gelesen und erkläre mich damit einverstanden, dass meine Daten wie beschrieben weitergegeben werden.</p>
+              <div class="checkBoxContainer">
+                <div id="newsletterBox" class="checkBox" onclick="checkNewsletter()"></div>
+                <p class="checkBoxContainerText">Ich möchte mich für den Newsletter anmelden.</p>
+                <input type="hidden" name="newsletter" id="newsletter" value="0">
+              </div>
+              <div class="checkBoxContainer">
+                <div id="privacyContainerBox" class="checkBox" onclick="checkPrivacy()"></div>
+                <p class="checkBoxContainerText">Ich habe die <a target="_blank" href="/privacy-policy" >Datenschutzerklärung</a> gelesen und erkläre mich damit einverstanden, dass meine Daten wie beschrieben weitergegeben werden.</p>
               </div>
               <div id="privacyAlert" class="dNone" >Bitte akzeptiere die Datenschutzerklärung.</div>
               <button type="submit" disabled id="sendButton">Senden</button>

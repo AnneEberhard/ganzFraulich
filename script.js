@@ -1,4 +1,5 @@
 let privacyChecked = false;
+let newsletterStatus = false;
 
 async function init() {
   await includeHTML();
@@ -88,9 +89,10 @@ function checkPrivacy() {
 }
 
 async function sendMail() {
-  disableFields();
   try {
       const formData = new FormData(document.getElementById('contactForm'));
+      console.log([...formData.entries()]);
+      disableFields();
       const response = await fetch('send_mail.php', {
           method: 'POST',
           body: formData
@@ -127,4 +129,16 @@ function clearFields() {
   nameField.value = '';
   emailField.value = '';
   messageField.value = '';
+}
+
+function checkNewsletter() {
+  if (!newsletterStatus) {
+    newsletterBox.innerHTML = '<img src="assets/img/checkmarkPetrol.png" class="checkmark">';
+    newsletterStatus = true;
+    newsletter.value=1;
+} else {
+    newsletterBox.innerHTML = '';
+    newsletterStatus = false;
+    newsletter.value=0;
+}
 }
