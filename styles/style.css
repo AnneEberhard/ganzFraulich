@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 60px;
   font-family: "Pompiere";
   margin-block-start: 0;
   margin-block-end: -0.5em;
@@ -56,6 +56,7 @@ ul {
   flex: 1;
   padding: 32px 60px 16px 60px;
   text-align: center;
+  margin-top: 30px;
 }
 
 
