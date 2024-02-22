@@ -6,7 +6,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   font-family: "Raleway";
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   color: rgb(28, 50, 86);
 }
 
@@ -77,6 +77,11 @@ span {
   align-items: flex-start;
 }
 /*index*/
+.indexLinks {
+  gap: 8px 
+  px
+  ;
+}
 
 .infoBox {
   display: flex;
@@ -292,26 +297,4 @@ button {
 path,
 rect {
   transition: fill 0.3s, stroke 0.3s;
-}
-
-@media (max-width: 1000px) {
-  #team {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #teamfoto {
-    width:40vw;
-    height:40vw;
-  }
-  
-  #kerstin {
-    flex:1;
-  }
-  
-  #corinna {
-    width: 90vw;
-  }
-
 }
