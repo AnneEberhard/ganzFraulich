@@ -85,7 +85,7 @@ span {
 }
 
 .infoText {
-  text-align: left;
+  text-align: left !important;
   font-size:24px;
   font-weight: 400;
   margin-top: 26px;
@@ -229,6 +229,22 @@ button {
 /*team site*/
 #team {
   display: flex;
+  text-align: start;
+
+  gap:16px;
+}
+
+#teamfoto {
+  width:30vw;
+  height:30vw;
+}
+
+#kerstin {
+  flex:1;
+}
+
+#corinna {
+  width: 20vw;
 }
 
 /*scroll*/
@@ -278,3 +294,24 @@ rect {
   transition: fill 0.3s, stroke 0.3s;
 }
 
+@media (max-width: 1000px) {
+  #team {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #teamfoto {
+    width:40vw;
+    height:40vw;
+  }
+  
+  #kerstin {
+    flex:1;
+  }
+  
+  #corinna {
+    width: 90vw;
+  }
+
+}
