@@ -74,8 +74,29 @@ span {
 .indexLinks {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+/*index*/
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
 }
 
+.infoText {
+  text-align: left;
+  font-size:24px;
+  font-weight: 400;
+  margin-top: 26px;
+}
+
+.small {
+  text-align: left;
+  font-size:18px;
+  font-weight: 400;
+  margin-top: 12px;
+}
 
 /*contact*/
 #contactForm {
@@ -203,6 +224,11 @@ button {
   color: red;
   width: 100%;
   margin-bottom: 12px;
+}
+
+/*team site*/
+#team {
+  display: flex;
 }
 
 /*scroll*/
