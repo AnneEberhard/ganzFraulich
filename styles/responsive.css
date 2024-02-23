@@ -1,5 +1,11 @@
 /*responsiveness*/
 
+@media (max-width: 1300px) {
+  #halfCircle {
+    height: 20vw;
+  }
+}
+
 @media (max-width: 1000px) {
     #halfCircle {
       width: 40vw;
