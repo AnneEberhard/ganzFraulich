@@ -3,7 +3,6 @@ let newsletterStatus = false;
 
 async function init() {
   await includeHTML();
-  highlightCurrentPage();
 }
 
 async function includeHTML() {
@@ -42,35 +41,6 @@ function closeMenu() {
   mobileNav.classList.remove("easeIn");
 }
 
-function highlightCurrentPage() {
-  const currentPage = window.location.pathname;
-  if (currentPage.includes("index.html")) {
-    makeLinkBold("linkIndex");
-  } else if (currentPage.includes("workshopWeiblich.html")) {
-    makeLinkBold("linkWeiblich");
-  } else if (currentPage.includes("workshopGrenzen.html")) {
-    makeLinkBold("linkGrenzen");
-  } else if (currentPage.includes("/workshopSpuerbar.html")) {
-    makeLinkBold("linkSpuerbar");
-  } else if (currentPage.includes("/workshopGekonnt.html")) {
-    makeLinkBold("linkGekonnt");
-  } else if (currentPage.includes("/workshopVerletzlich.html")) {
-    makeLinkBold("linkVerletzlich");
-  } else if (currentPage.includes("/imprint.html")) {
-    makeLinkBold("linkImpressum");
-  } else if (currentPage.includes("/privacy-policy.html")) {
-    makeLinkBold("linkDatenschutz");
-  } else if (currentPage.includes("/contact.html")) {
-    makeLinkBold("linkKontakt");
-  } 
-}
-
-function makeLinkBold(linkId) {
-  const link = document.getElementById(linkId);
-  if (link) {
-      link.classList.add('bold');
-  }
-}
 
 function checkPrivacy() {
   if (!privacyChecked) {
@@ -100,6 +70,7 @@ async function sendMail() {
       if (response.ok) {
           alert('Erfolgreich versendet');
           clearFields();
+          window.location.href = "index.html";
       } else {
           throw new Error('Fehler beim Senden');
       }

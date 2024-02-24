@@ -27,18 +27,18 @@ h2 {
 }
 
 h3 {
-  font-size:34px;
-  color: rgb(42,114,121);
+  font-size: 34px;
+  color: rgb(42, 114, 121);
 }
 
 h4 {
   font-size: 26px;
-  color: rgb(42,114,121);
+  color: rgb(42, 114, 121);
   margin-block-end: 0.5em;
 }
 
 a {
-  color: rgb(42,114,121);
+  color: rgb(42, 114, 121);
   text-decoration: none;
   font-size: 24px;
 }
@@ -59,16 +59,15 @@ ul {
   margin-top: 30px;
 }
 
-
 p {
-font-size:24px;
-font-weight: 400;
-width: 100%;
+  font-size: 24px;
+  font-weight: 400;
+  width: 100%;
 }
 
 span {
   font-weight: bold;
-  font-size:24px;
+  font-size: 24px;
 }
 
 .indexLinks {
@@ -78,9 +77,7 @@ span {
 }
 /*index*/
 .indexLinks {
-  gap: 8px 
-  px
-  ;
+  gap: 8px px;
 }
 
 .infoBox {
@@ -91,14 +88,14 @@ span {
 
 .infoText {
   text-align: left !important;
-  font-size:24px;
+  font-size: 24px;
   font-weight: 400;
   margin-top: 26px;
 }
 
 .small {
   text-align: left;
-  font-size:18px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 12px;
 }
@@ -113,7 +110,7 @@ span {
 }
 
 input {
-  border: solid 1px rgb(42,114,121);
+  border: solid 1px rgb(42, 114, 121);
   border-radius: 10px;
   padding: 15px 25px 15px 25px;
   display: flex;
@@ -131,7 +128,7 @@ input:hover {
 }
 
 input::placeholder {
-  color: rgb(42,114,121);
+  color: rgb(42, 114, 121);
   font-family: "Poppins";
 }
 
@@ -146,13 +143,13 @@ input:visited {
 }
 
 textarea {
-  border: solid 1px rgb(42,114,121);
+  border: solid 1px rgb(42, 114, 121);
   border-radius: 10px;
   padding: 15px 25px 15px 25px;
   gap: 4px;
   font-size: 16px;
   width: 100%;
-  color: rgb(42,114,121);
+  color: rgb(42, 114, 121);
   box-sizing: border-box;
   background-color: white;
   height: 340px;
@@ -164,7 +161,7 @@ textarea:hover {
 }
 
 textarea::placeholder {
-  color: rgb(42,114,121);
+  color: rgb(42, 114, 121);
   font-family: "Poppins";
 }
 
@@ -193,8 +190,8 @@ button {
 }
 
 .hoverButton:hover {
-    transform: scale(1.1);
-  }
+  transform: scale(1.1);
+}
 
 .checkBoxContainer {
   display: flex;
@@ -235,21 +232,18 @@ button {
 #team {
   display: flex;
   text-align: start;
-
-  gap:16px;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
 }
 
 #teamfoto {
-  width:30vw;
-  height:30vw;
+  width: 30vw;
+  height: 30vw;
 }
 
-#kerstin {
-  flex:1;
-}
-
-#corinna {
-  width: 20vw;
+.infoDetails {
+  font-size:20px;
 }
 
 /*scroll*/

@@ -1,6 +1,6 @@
 <?php
 
-$recipient = 'anne.eberhard@gmx.net';
+$recipient = 'soultime@frauenarztpraxis-alsterdorf.de';
 ##$redirect = 'success.html';
 
 
@@ -16,14 +16,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $newsletterStatus = isset($_POST['newsletter']) ? $_POST['newsletter'] : '0';
 
         if ($newsletterStatus === '1') {
-            $newsletterMessage = "Sender/in hat sich für den Newsletter angemeldet.";
+            $newsletterMessage = "Sender/in hat sich beim Newsletter angemeldet.";
         } else {
             $newsletterMessage = "";
         }
 
         $subject = "Contact From " . $_POST['name'];
         $headers = "From: noreply@ganzfraulich.de";
-        $message = $_POST['message'] . "\n\n" . $newsletterMessage;
+        $message = 'von: '. $_POST['email'] . "\n\n" . $_POST['message'] . "\n\n" . $newsletterMessage;
 
         mail($recipient, $subject, $message, $headers, $newsletterMessage);
 
