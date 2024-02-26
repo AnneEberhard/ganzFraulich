@@ -7,139 +7,128 @@
 }
 
 @media (max-width: 1000px) {
-    #halfCircle {
-      width: 40vw;
-      height: 40vw;
-      top: 0;
-      right:0;
-    }
+  #halfCircle {
+    width: 40vw;
+    height: 40vw;
+    top: 0;
+    right: 0;
   }
-  
-  @media (max-width: 700px) {
-    #headerBottom {
-      text-align: center;
-    }
-  
-    #desktopNav {
-      display: none;
-    }
-  
-    #burgerMenu {
-      display: flex !important;
-      justify-content: center;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-  
-    .burgerMenuImage:hover {
-      box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
-    }
-  
-    #mobileNav {
-      right: 0;
-    }
-  
-    .logo {
-      height: 150px;
-    }
+}
 
-    #team {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-      }
-      
-      #teamfoto {
-        width:40vw;
-        height:40vw;
-      }
-      
-      #kerstin {
-        flex:1;
-      }
-      
-      #corinna {
-        width: 90vw;
-      }
-    
+@media (max-width: 700px) {
+  #headerBottom {
+    text-align: center;
   }
-  
-  @media (max-width: 600px) {
-    .logo {
-      height: 100px;
-    }
-  
-    #halfCircle {
-      width: 50vw;
-      height: 40vw;
-      top: 0;
-    }
-  
-    #headerBottom {
-      margin-block-start: 0.2em;
-      margin-block-end: 0.2em;
-    }
-  
-    footer {
-      height: 100%;
-      padding-bottom: 8px;
-    }
-  
-    .footerLinks {
-      flex-direction: column;
-    }
-  }
-  
-  @media (max-width: 450px) {
-    #headerTop {
-      align-items: center;
-      flex-direction: column-reverse;
-      text-align: center;
-    }
-  
-    #headerTopText {
-      padding-top: 30px;
-    }
-  
-    #halfCircle {
-      width: 50vw;
-      height: 40vw;
-      top: 0;
-    }
-  
-    #mobileNav {
-      padding: 0;
-      padding-top: 60px;
-    }
-  
-    #closeButton {
-      margin-top: 18px;
-    }
-  
-    .mobileNavLink {
-      font-size: 20px;
-    }
-  
-    .mainContainer {
-      margin-top: 0 !important;
-      padding: 32px 16px 16px 16px !important;
-    }
-  
-    h2 {
-      margin-block-end: 0;
-    }
-  
-    .navLink {
-      font-size: 18px;
-    }
-  
-    p {
-      font-size: 18px;
-    }
-  
-    .infoText {
-      font-size: 18px;
-    }
 
+  #desktopNav {
+    display: none;
   }
-  
+
+  #burgerMenu {
+    display: flex !important;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .burgerMenuImage:hover {
+    box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
+  }
+
+  #mobileNav {
+    right: 0;
+  }
+
+  .logo {
+    height: 150px;
+  }
+
+  #team {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  #teamfoto {
+    width: 40vw;
+    height: 40vw;
+  }
+
+  footer {
+    height: 100%;
+    padding-bottom: 8px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    height: 100px;
+  }
+
+  #halfCircle {
+    width: 50vw;
+    height: 40vw;
+    top: 0;
+  }
+
+  #headerBottom {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+  }
+}
+
+@media (max-width: 450px) {
+  #headerTop {
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  #headerTopText {
+    padding-top: 30px;
+  }
+
+  #halfCircle {
+    width: 50vw;
+    height: 40vw;
+    top: 0;
+  }
+
+  #mobileNav {
+    padding: 0;
+    padding-top: 60px;
+  }
+
+  #closeButton {
+    margin-top: 18px;
+  }
+
+  .mobileNavLink {
+    font-size: 20px;
+  }
+
+  .mainContainer {
+    margin-top: 0 !important;
+    padding: 32px 16px 16px 16px !important;
+  }
+
+  h2 {
+    margin-block-end: 0;
+  }
+
+  .navLink {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .infoText {
+    font-size: 18px;
+  }
+}
