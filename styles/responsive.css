@@ -131,4 +131,18 @@
   .infoText {
     font-size: 18px;
   }
+
+  .popUp {
+    padding:0;
+    width: 90%;
+  }
+
+  .buttonBox {
+    padding: 4px 0 4px 0;
+}
+
+.privacyLink {
+  font-size: 18px;
+}
+
 }

@@ -41,44 +41,46 @@ function closeMenu() {
   mobileNav.classList.remove("easeIn");
 }
 
-
 function checkPrivacy() {
   if (!privacyChecked) {
-      privacyContainerBox.innerHTML = '<img src="assets/img/checkmarkPetrol.png" class="checkmark">';
-      sendButton.disabled = false;
-      sendButton.classList.add('hoverButton');
-      privacyChecked = true;
-      privacyAlert.classList.add('dNone');
+    privacyContainerBox.innerHTML =
+      '<img src="assets/img/checkmarkPetrol.png" class="checkmark">';
+    sendButton.disabled = false;
+    sendButton.classList.add("hoverButton");
+    privacyChecked = true;
+    privacyAlert.classList.add("dNone");
   } else {
-      privacyContainerBox.innerHTML = '';
-      sendButton.disabled = true;
-      sendButton.classList.remove('hoverButton');
-      privacyChecked = false;
-      privacyAlert.classList.remove('dNone');
+    privacyContainerBox.innerHTML = "";
+    sendButton.disabled = true;
+    sendButton.classList.remove("hoverButton");
+    privacyChecked = false;
+    privacyAlert.classList.remove("dNone");
   }
 }
 
 async function sendMail() {
   try {
-      const formData = new FormData(document.getElementById('contactForm'));
-      console.log([...formData.entries()]);
-      disableFields();
-      const response = await fetch('send_mail.php', {
-          method: 'POST',
-          body: formData
-      });
-      if (response.ok) {
-          alert('Erfolgreich versendet');
-          clearFields();
-          window.location.href = "index.html";
-      } else {
-          throw new Error('Fehler beim Senden');
-      }
+    const formData = new FormData(document.getElementById("contactForm"));
+    console.log([...formData.entries()]);
+    disableFields();
+    const response = await fetch("send_mail.php", {
+      method: "POST",
+      body: formData,
+    });
+    if (response.ok) {
+      document.getElementById("alertMessageSent").classList.remove("dNone");
+      clearFields();
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 2000);
+    } else {
+      throw new Error("Fehler beim Senden");
+    }
   } catch (error) {
-      console.error('Fehler:', error);
-      alert('Fehler beim Senden');
+    console.error("Fehler:", error);
+    alert("Fehler beim Senden");
   } finally {
-      enableFields();
+    enableFields();
   }
 }
 
@@ -97,19 +99,29 @@ function enableFields() {
 }
 
 function clearFields() {
-  nameField.value = '';
-  emailField.value = '';
-  messageField.value = '';
+  nameField.value = "";
+  emailField.value = "";
+  messageField.value = "";
+}
+
+function cancel() {
+  document.getElementById("optInContainer").classList.add("dNone");
+}
+
+function optInNewsletter() {
+  newsletterBox.innerHTML =
+    '<img src="assets/img/checkmarkPetrol.png" class="checkmark">';
+  newsletterStatus = true;
+  newsletter.value = 1;
+  document.getElementById("optInContainer").classList.add("dNone");
 }
 
 function checkNewsletter() {
   if (!newsletterStatus) {
-    newsletterBox.innerHTML = '<img src="assets/img/checkmarkPetrol.png" class="checkmark">';
-    newsletterStatus = true;
-    newsletter.value=1;
-} else {
-    newsletterBox.innerHTML = '';
+    document.getElementById("optInContainer").classList.remove("dNone");
+  } else {
+    newsletterBox.innerHTML = "";
     newsletterStatus = false;
-    newsletter.value=0;
-}
+    newsletter.value = 0;
+  }
 }
