@@ -41,11 +41,12 @@ a {
   color: rgb(42, 114, 121);
   text-decoration: none;
   font-size: 24px;
+  cursor: pointer;
 }
 
 a:hover {
-  color: #0097b2;
-  text-shadow: 2px 2px 4px rgba(92, 175, 198, 0.8);
+  color: #8fb8bc;
+  text-shadow: 1px 1px 1px rgba(92, 175, 198, 0.8);
 }
 
 ul {
@@ -124,7 +125,7 @@ input {
 }
 
 input:hover {
-  border: solid 1px #00bee8;
+  border: solid 1px #8fb8bc;
 }
 
 input::placeholder {
@@ -147,7 +148,7 @@ textarea {
   border-radius: 10px;
   padding: 15px 25px 15px 25px;
   gap: 4px;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
   color: rgb(42, 114, 121);
   box-sizing: border-box;
@@ -157,7 +158,7 @@ textarea {
 }
 
 textarea:hover {
-  border: solid 1px #00bee8;
+  border: solid 1px #8fb8bc;
 }
 
 textarea::placeholder {
@@ -204,13 +205,17 @@ button {
 .checkBox {
   height: 24px;
   width: 24px;
-  border: solid 2px #00bee8;
+  border: solid 2px rgba(0, 190, 232, 0.2);
   cursor: pointer;
 }
 
 .checkBox {
-  box-shadow: 1px 1px 20px 10px rgba(0, 190, 232, 0.2);
-  background-color: rgba(0, 190, 232, 0.2);
+  box-shadow: 1px 1px 20px 10px #8fb8bc;
+}
+
+.checkmark {
+  width: 25px;
+  height: 25px;
 }
 
 .checkBoxContainerText {
@@ -228,30 +233,30 @@ button {
 }
 
 .overlay {
-  background-color: rgba(0,0,0,0.2);
-  position:fixed;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
-  display:flex;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .popUp {
-  background-color:white;
-  display:flex;
+  background-color: white;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  padding:16px;
+  padding: 16px;
 }
 
 .buttonBox {
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   width: 100%;
   padding: 16px 0 16px 0;
@@ -272,7 +277,7 @@ button {
 }
 
 .infoDetails {
-  font-size:20px;
+  font-size: 20px;
 }
 
 /*scroll*/

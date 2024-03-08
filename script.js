@@ -1,8 +1,18 @@
 let privacyChecked = false;
 let newsletterStatus = false;
 
+let workshops = [
+  { name: "Ganzfraulich - weiblich", date: "27.04.2024" },
+  { name: "Ganzfraulich - Grenzen setzen", date: "01.06.2024" },
+  { name: "Ganzfraulich - spürbar", date: "06.07.2024" },
+  { name: "Ganzfraulich - gekonnt gestresst", date: "12.10.2024" },
+  { name: "Ganzfraulich - verletzlich", date: "31.11.2024" },
+];
+
 async function init() {
   await includeHTML();
+  localStorage.removeItem("clicked");
+  localStorage.removeItem("workshopId");
 }
 
 async function includeHTML() {
@@ -123,5 +133,21 @@ function checkNewsletter() {
     newsletterBox.innerHTML = "";
     newsletterStatus = false;
     newsletter.value = 0;
+  }
+}
+
+function signUp(workshopId) {
+  localStorage.setItem("clicked", true);
+  localStorage.setItem("workshopId", workshopId);
+  window.location.href = "contact.html";
+}
+
+function contact() {
+  let clicked = localStorage.getItem("clicked");
+  let workshopId = localStorage.getItem("workshopId");
+  if (clicked) {
+    let workshopName = workshops[workshopId]["name"];
+    let workshopDate = workshops[workshopId]["date"];
+    document.getElementById("messageField").value = `Hiermit melde ich mich verbindlich an für den Workshop ${workshopName} am ${workshopDate}.`;
   }
 }

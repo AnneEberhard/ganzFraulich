@@ -24,13 +24,6 @@
     display: none;
   }
 
-  #burgerMenu {
-    display: flex !important;
-    justify-content: center;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-
   .burgerMenuImage:hover {
     box-shadow: 0px 0px 36px rgba(255, 255, 255, 1);
   }
@@ -44,7 +37,6 @@
   }
 
   #team {
-    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
   }
@@ -65,6 +57,11 @@
 }
 
 @media (max-width: 600px) {
+  #headerTop {
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
   .logo {
     height: 100px;
   }
@@ -81,12 +78,9 @@
   }
 }
 
+
 @media (max-width: 450px) {
-  #headerTop {
-    align-items: center;
-    flex-direction: column-reverse;
-    text-align: center;
-  }
+
 
   #headerTopText {
     padding-top: 30px;
@@ -116,6 +110,10 @@
     padding: 32px 16px 16px 16px !important;
   }
 
+  #burgerMenu {
+    left: 16px;
+  }
+
   h2 {
     margin-block-end: 0;
   }
@@ -131,6 +129,11 @@
   .infoText {
     font-size: 18px;
   }
+
+  .infoDetails {
+    font-size: 16px;
+  }
+
 
   .popUp {
     padding:0;
